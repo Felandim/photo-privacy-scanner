@@ -1,4 +1,4 @@
-name: Deploy site to GitHub Pages
+name: Retire GitHub Pages app
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: site
-      - name: Deploy
+          path: pages-disabled
+      - name: Deploy 404 only
         id: deployment
         uses: actions/deploy-pages@v4
